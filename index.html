@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #ff6b81;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Animasi Fade In */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: #333;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .love {
+            font-size: 3rem;
+            color: #ff69b4;
+            animation: moveLove 3s ease-in-out infinite;
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        @keyframes moveLove {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Image styling */
+        .container img {
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .container img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Background heart styling */
+        .background-heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 10rem;
+            color: rgba(255, 0, 0, 0.1);
+            z-index: -1;
+            animation: floatingHeart 6s ease-in-out infinite;
+        }
+
+        @keyframes floatingHeart {
+            0% { transform: translate(-50%, -50%) translateY(0); }
+            50% { transform: translate(-50%, -50%) translateY(-30px); }
+            100% { transform: translate(-50%, -50%) translateY(0); }
+        }
+
+        /* Container centering */
+        .container {
+            text-align: center;
+            position: relative;
+            padding: 40px 0;
+        }
+
+        /* Delay effect for different paragraphs */
+        .container p:nth-child(1) { animation-delay: 0s; }
+        .container p:nth-child(2) { animation-delay: 2s; }
+        .container p:nth-child(3) { animation-delay: 4s; }
+        .love { animation-delay: 6s; }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 30px;
+            font-weight: 700;
+            color: #ff6b81;
+            margin-bottom: 40px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .col-md-4, .col-md-8 {
+            padding: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .col-md-4, .col-md-8 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Buat Kamu Mima</span>
+        </div>
+    </nav>
+
+    <!-- Background heart decoration -->
+    <div class="background-heart">♥</div>
+
+    <!-- isi -->
+    <div class="container mt-4">
+       
+
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="foto/foto1.jpeg" class="img-fluid" style="width: 100%;">
+            </div>
+            <div class="col-md-8">
+                <p>"Ketika kamu hadir, rasanya seperti menemukan bagian yang hilang dari hatiku. Kamu adalah rumah yang tak pernah kutahu kucari, tempat di mana aku merasa damai dan lengkap. Dalam setiap senyummu, aku menemukan keberanian untuk mencintai lebih dalam, dan dalam setiap genggaman tanganmu, aku merasa bahwa dunia ini tak akan pernah sepi lagi. Kamu adalah cerita indah yang tak akan pernah ingin kututup."</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <p>"Di atas bukit ini, di antara langit biru dan angin sepoi-sepoi, aku menemukan kedamaian saat kamu berada di sampingku. Seperti bukit yang menjulang tinggi, perasaanku padamu semakin kuat dan tak tergoyahkan."</p>
+            </div>
+            <div class="col-md-4">
+                <img src="foto/foto2.jpeg" class="img-fluid" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Love animation -->
+    <div class="container">
+        <span class="love">♥</span>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="foto/foto3.jpeg" class="img-fluid" style="width: 100%;">
+            </div>
+            <div class="col-md-8">
+                <p>"Mata kamu adalah karya seni yang sempurna, bukan hanya karena warnanya yang menawan, tetapi juga karena cara mereka bisa mengungkapkan segala perasaan yang tak bisa diungkapkan dengan kata-kata. Setiap tatapanmu mampu membuat dunia berhenti sejenak, mengalihkan segala perhatian hanya pada kamu. Seperti sebuah lagu yang indah, matamu membawa kedamaian di hatiku, meredakan segala kegelisahan, dan memberi harapan yang selalu membuatku terus tersenyum meskipun dunia terasa berat."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Love animation -->
+    <div class="container">
+        <span class="love">♥</span>
+    </div>
+</body>
+</html>
